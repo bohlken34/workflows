@@ -95,7 +95,7 @@ gulp.task('html', function() {
 gulp.task('json', function() {
 	gulp.src('builds/development/js/*.json')
 	.pipe(gulpif(env === 'production', jsonminify()))
-	.pipe(gulpif(env === 'production', gulp.dest(outputDir)))
+	.pipe(gulpif(env === 'production', gulp.dest(outputDir + 'js')))
 	.pipe(connect.reload())
 });
 
